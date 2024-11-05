@@ -1,0 +1,17 @@
+[package]
+name = "evm-tui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy = { version = "0.5", features = [
+    "network",
+    "rpc-client",
+    "rpc-types",
+    "signer-ledger",
+    "signer-mnemonic",
+    # TODO use a proper provider
+    "provider-anvil-node",
+] }
+eyre = "0.6"
+tokio = { version = "1.41", features = ["macros", "rt-multi-thread"] }
